@@ -182,7 +182,7 @@ if (msg.content.toLowerCase() === '!credits') {
 if (msg.content.toLowerCase() === 't!credits <@281959072142458881> 250') {
     msg.channel.send('Thanks for your purchase! If a discount applies to you, you will be paid back!');}
   if (msg.content.toLowerCase() === '!help') {
-    msg.channel.send('Commands: \n!roast: Best roasts from Trevor! \n!asktrev <question>: Trevor will respond to your question (E.G: "How much does Trevor weigh?", "When was Trevor born?") \n!pyramid <number>: COMING SOON: Makes an emoji pyramid, the maximum amount of emojis will be the number you specified. Max number allowed: 27 \n!say <phrase>: Says what you typed! \n!rr/!russianroulette: Plays a game of Russian roulette. 1 in 6 chambers.\n!catpicoftheday: BETA: Triggers a random Trevor pic\n!mindbleach/!eyebleach: Shows you a calming/cute photo (of Trevor).\n!howtrueis: How true is the info you requested?\n!tehurn/!nottehurn: tehurn.com and tehurn.com/not\n!trevporn: Gives you a (SFW) video of Trevor and his blankets \n!rolemarket: EXCLUSIVE TO THIS SRSS: Buy some colors! \n!info: Detailed information about the bot\'s hosting PC');}
+    msg.channel.send('Commands: \n!roast: Best roasts from Trevor! \n!asktrev <question>: Trevor will respond to your question (E.G: "How much does Trevor weigh?", "When was Trevor born?") \n!pyramid <number>: COMING SOON: Makes an emoji pyramid, the maximum amount of emojis will be the number you specified. Max number allowed: 27 \n!say <phrase>: Says what you typed! \n!rr/!russianroulette: Plays a game of Russian roulette. 1 in 6 chambers.\n!catpicoftheday: BETA: Triggers a random Trevor pic\n!mindbleach/!eyebleach: Shows you a calming/cute photo (of Trevor).\n!howtrueis: How true is the info you requested?\n!tehurn/!nottehurn: tehurn.com and tehurn.com/not\n!trevporn: Gives you a (SFW) video of Trevor and his blankets \n!rolemarket: EXCLUSIVE TO THIS SRSS: Buy some colors! \n!dolan: BETA: Shows a random dolan comic! \n!credits: Shows bot credits. \n!info: Detailed information about the bot\'s hosting PC');}
  if (msg.content.toLowerCase() === '!info') {
 	//msg.channel.send(cpuStat.usagePercent(remb));
 	msg.channel.send(resource_embed());
@@ -345,5 +345,24 @@ function imageEmbed(title, url) {
     return t;
 }var t = randomURL();
 	msg.channel.send(imageEmbed("Here is your cat picture of the day!", t));
+}
+
+if (msg.content.toLowerCase() === '!dolan') {
+	function randomURL() {
+    var t = Math.floor(Math.random()*15); 
+    console.log(t);
+    var urls = "https://i.imgur.com/";
+    var urle = ["NCfBYzh.jpg","sbA4LE3.png","XYHCXN6.jpg","tgrLM31.jpg","WMZT3OV.png","nSsS71z.jpg", "urk0u50.jpg","U13M6Fq.jpg","oDHUWjp.jpg","W2F7rVW.jpg", "9g74QaU.jpg", "30ziNNr.png", "4lY2FeW.png", "FKFYGaD.png", "qnuWrqF.jpg"]
+    return urls + urle[t];
+}
+function imageEmbed(title, url) {
+    var t = new Discord.RichEmbed()
+    .setTitle(title)
+    .setAuthor("Trevor", client.user.avatarURL)
+    .setColor(3447003)
+    .setImage(url)
+    return t;
+}var t = randomURL();
+	msg.channel.send(imageEmbed("Here's your random dolan comic!", t));
 }
 });
