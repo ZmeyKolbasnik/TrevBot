@@ -1,7 +1,7 @@
 # TrevBot
 TrevBot is an open source bot based on a cat, you can check out the commands down below. This bot was coded by: ZmeyKolbasnik, Déžo and Epicness1o1. Trevor himself (The cat who the bot is based on) is owned by sullyrox and so is his image. Enjoy the bot! <3
 
-Current release: Beta v 0.82b.
+Current release: Beta v 0.83.
 # Commands
 Commands: 
 !roast: Best roasts from Trevor! 
